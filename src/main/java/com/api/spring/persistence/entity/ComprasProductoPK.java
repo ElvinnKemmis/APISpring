@@ -10,17 +10,17 @@ import java.io.Serializable;
 @Embeddable
 public class ComprasProductoPK implements Serializable {
     @Column(name="id_compra")
-    private Integer idcompra;
+    private Integer idCompra;
     @Column(name="id_producto")
     private Integer idProducto;
 
 
-    public Integer getIdcompra() {
-        return idcompra;
+    public Integer getIdCompra() {
+        return idCompra;
     }
 
-    public void setIdcompra(Integer idcompra) {
-        this.idcompra = idcompra;
+    public void setIdCompra(Integer idCompra) {
+        this.idCompra = idCompra;
     }
 
     public Integer getIdProducto() {

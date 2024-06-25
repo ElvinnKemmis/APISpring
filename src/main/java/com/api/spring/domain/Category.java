@@ -3,7 +3,7 @@ package com.api.spring.domain;
 public class Category {
     private int categoryId;
     private String category;
-    private  Boolean active;
+    private  boolean active;
 
 
     public int getCategoryId() {
@@ -26,7 +26,7 @@ public class Category {
         return active;
     }
 
-    public void setActive(Boolean active) {
+    public void setActive(boolean active) {
         this.active = active;
     }
 }

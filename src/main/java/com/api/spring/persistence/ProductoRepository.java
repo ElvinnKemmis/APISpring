@@ -39,7 +39,7 @@ public class ProductoRepository implements ProductRepository {
 
     @Override
     public Optional<List<Product>> getScarseProducts(int quantity) {
-        Optional<List<Producto>> productos = productoCrudRepository.findByCantidadStockLesstahnAndEstado(quantity, true);
+        Optional<List<Producto>> productos = productoCrudRepository.findByCantidadStockLessThanAndEstado(quantity, true);
         return productos.map(prods -> mapper.toProducts(prods));
     }
 
@@ -51,7 +51,7 @@ public class ProductoRepository implements ProductRepository {
 
     @Override
     public Product save(Product product) {
-        Producto producto = mapper.toProduct(product);
+        Producto producto = mapper.toProducto(product);
         return mapper.toProduct(productoCrudRepository.save(producto));
     }
 
