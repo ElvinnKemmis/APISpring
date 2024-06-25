@@ -14,6 +14,9 @@ public class ComprasProducto {
     private Boolean estado;
 
     @ManyToOne
+    //con esto puedo saber a que producto eprtenece el id cuando venga
+    //en cascada los valores
+    @MapsId("idCompra")
     @JoinColumn(name = "id_compra", insertable = false, updatable = false)
     private Compra compra;
 
