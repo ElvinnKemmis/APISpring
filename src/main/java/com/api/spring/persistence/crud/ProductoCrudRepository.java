@@ -8,6 +8,7 @@ import java.util.Optional;
 
 public interface ProductoCrudRepository extends CrudRepository <Producto, Integer>{
 
+//    Nos permite manjear la base de datos de una manera rapida y sensiblla
     List<Producto> findByIdCategoriaOrderByNombreAsc(int idCategoria);
     Optional<List<Producto>> findByCantidadStockLessThanAndEstado(int cantidadStock, boolean estado);
 

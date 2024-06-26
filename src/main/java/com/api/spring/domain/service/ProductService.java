@@ -8,6 +8,8 @@ import org.springframework.stereotype.Service;
 import java.util.List;
 import java.util.Optional;
 
+//El servicio es la logica de accesos a los datos y sirve como un intermediario
+// entre el controlador y el repositorio
 @Service
 public class ProductService {
     @Autowired

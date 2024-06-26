@@ -12,19 +12,27 @@ import java.util.List;
 import java.util.Optional;
 
 //Con esta notación indicamos que esta clase se encarga de interactuar con la BD
+// y es desde aqui donde haremos als operaciones que quermos aplicar en nuestra
+// BD, ya que el repositorio solo cumple con la finalidade de acceso o comunicacion
+// con la BD
 @Repository
 public class ProductoRepository implements ProductRepository {
 
 //    Realizamos la inyecciond e dependencias con el Autowired, pero debemos
-//    asegurarnos que sea un comente de spring
+//    asegurarnos que sea un comente de spring, de esta forma tomaremos las
+//    sentencias como finAll() que son parte del crudRepository.
 
+
+//    Con el Autowired inicializamos e instanaciamso de forma automatica
     @Autowired
     private ProductoCrudRepository productoCrudRepository;
     @Autowired
     private ProductMapper mapper;
 
 
-//    Creando metodos
+//    Creando metodos los cuales simpleficamos su construccion con el crudReository
+//    como por ejemplo el getAll() que obtiene una lista de todo los productos esto
+//        gracias al crdRepository el cual lo hace a traves del findAll()
     @Override
     public List<Product> getAll(){
         List<Producto> productos = (List<Producto>) productoCrudRepository.findAll();
